@@ -1,0 +1,34 @@
+{
+  "manifest_version": 2,
+  "name": "Jobcan Extension",
+  "version": "0.0.2",
+  "description": "Chrome extension for Jobcan.",
+  "permissions": [
+    "storage",
+    "webRequest",
+    "webRequestBlocking",
+    "https://ssl.jobcan.jp/*"
+  ],
+  "background": {
+    "scripts": [
+      "scripts/common/constants.js",
+      "scripts/common/common.js",
+      "scripts/background/background.js"
+    ]
+  },
+  "content_scripts": [{
+    "matches": [
+      "https://ssl.jobcan.jp/*"
+    ],
+    "js":[
+      "scripts/common/constants.js",
+      "scripts/common/common.js",
+      "scripts/style.js",
+      "scripts/action.js",
+      "scripts/controller.js"
+    ]
+  }],
+  "web_accessible_resources": [
+    "styles/ext-style.css"
+  ]
+}

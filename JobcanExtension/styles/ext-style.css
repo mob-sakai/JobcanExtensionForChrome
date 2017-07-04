@@ -1,0 +1,12 @@
+.ext_ui_button {
+  background: linear-gradient(#eeeeee, #cccccc);
+  border: solid 1px #999999;
+  padding: 2px 4px;
+  border-radius: 3px;
+  text-decoration: none;
+  color: #000000;
+  cursor: pointer;
+}
+.ext_ui_button:active {
+  background: #cccccc;
+}
