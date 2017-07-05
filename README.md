@@ -1,25 +1,41 @@
 # ジョブカンが使いやすくなるChrome拡張機能 by 市原さん
 ## インストール
+
+### Macの場合
 * [JobcanExtension.crx](https://github.com/mob-sakai/JobcanExtensionForChrome/raw/master/JobcanExtension.crx) をダウンロードする
 * Chromeで「その他の機能 -> 拡張機能」を開くか、 chrome://extensions/ に移動する
-* ダウンロードした JobcanExtension.crx をドラッグ＆ドロップする  
+* ダウンロードした [JobcanExtension.crx](https://github.com/mob-sakai/JobcanExtensionForChrome/raw/master/JobcanExtension.crx) をドラッグ＆ドロップする  
 ![image](https://user-images.githubusercontent.com/12690315/27819235-3e4602ce-60d4-11e7-8b5c-4e45671a6382.png)
 * 「拡張機能を追加」を押す  
 ![install_q](https://user-images.githubusercontent.com/12690315/27818907-d06a6bce-60d2-11e7-80bb-916cb7df497d.png)
 
-
+　  
+### Windowsの場合
+* [JobcanExtension.zip](https://github.com/mob-sakai/JobcanExtensionForChrome/archive/master.zip) をダウンロードし、展開する
+* Chromeで「その他の機能 -> 拡張機能」を開くか、 chrome://extensions/ に移動する
+* 「デベロッパーモード」にチェックを入れ、「パッケージ化されていない拡張機能を読み込む...」をクリックする  
+![image](https://user-images.githubusercontent.com/12690315/27848696-1307d908-6182-11e7-8284-dad85cac29b2.png)  
+* さきほど展開したフォルダ内のJobcanExtensionフォルダを選択し、「OK」をクリックする  
+![image](https://user-images.githubusercontent.com/12690315/27849983-52f54c26-618c-11e7-9d5c-251adc885dc5.png)
 
 　  
-## 更新
-* JobcanExtensionは自動的に更新がインストールされます。特に操作は不要です。
-* 「その他の機能 -> 拡張機能」から、「拡張機能を今すぐ更新」を選択することでも更新できます。
-![image](https://user-images.githubusercontent.com/12690315/27847575-54fab924-6179-11e7-8731-6c9c2ee885fb.png)
+### 注意事項 (※Windowsのみ)
+* Chromeを起動するたびに次のようなポップアップが表示されます。  
+「キャンセル」をクリックしてください。  
+![image](https://user-images.githubusercontent.com/12690315/27848644-a2deebda-6181-11e7-9644-987efbe74653.png)
+
+　  
+### 更新
+* 【Windows】  
+上記インストール方法で最新版のプラグインをインストールしてください
+* 【Mac】  
+JobcanExtensionは自動的に更新がインストールされます。特に操作は不要です。
 
 
 
 　  
 ## アンインストール
-* 「その他の機能 -> 拡張機能」から、JobcanExtensionを削除してください。
+* 「その他の機能 -> 拡張機能」から、JobcanExtensionを削除してください。  
 ![image](https://user-images.githubusercontent.com/12690315/27847557-361de936-6179-11e7-95ea-fbbc988942a3.png)
 
 
