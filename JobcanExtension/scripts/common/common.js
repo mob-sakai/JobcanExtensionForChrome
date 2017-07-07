@@ -9,7 +9,7 @@ var _g = this; // グローバルスコープのthisキャッシュ
 
   var storageKeys = [];
   for(var storageKey in Constants.STORAGE_KEY) {
-    if (Constants.STORAGE_KEY.hasOwnProperty(storageKey)) storageKeys.push(storageKey);
+    if (Constants.STORAGE_KEY.hasOwnProperty(storageKey)) storageKeys.push(Constants.STORAGE_KEY[storageKey]);
   }
   chrome.storage.local.get(storageKeys, data => {
     for (var key in data) {

@@ -27,11 +27,15 @@ var manHourManage = () => {
         };
         checkEnabledDialog();
       }).then(val => {
-        var easyInputSelect = document.querySelector('#select-template > select');
-        easyInputSelect.value = 1;
+        let storageData = getStorageData();
+        let easyInputSelect = document.querySelector('#select-template > select');
+        easyInputSelect.addEventListener('change', () => {
+          setStorageData(Constants.STORAGE_KEY.EASY_INPUT_VALUE, easyInputSelect.value);
+        });
+        easyInputSelect.value = storageData[Constants.STORAGE_KEY.EASY_INPUT_VALUE] || 1;
         forceExecuteScript("changeTemplate();", "changeTemplate_script");
 
-        var createFullAllocButton = () => {
+        let createFullAllocButton = () => {
           if (editMenu.style.display == 'none') return;
 
           document.querySelectorAll('#edit-menu-contents > table > tbody > tr.daily').forEach((editMenuRow, curIndex) => {
