@@ -54,20 +54,18 @@ var manHourManage = () => {
             fullAllocButton = document.createElement('div');
             fullAllocButton.className = "ext_ui_button";
             fullAllocButton.style.display = "inline";
-            fullAllocButton.innerText = "100%割当";
+            fullAllocButton.innerText = "残工数を割当";
             fullAllocButton.addEventListener('click', () => {
-              var workingTime = ~~document.getElementById('hiddenTime').value;
-              var workingHour = Math.floor(workingTime / 60);
-              var workingMinute = workingTime % 60;
+              var remainTime = ~~document.getElementById('hiddenTime').value;
+              editMenu.querySelectorAll('input[name^=hiddenMinutes]').forEach((hiddenMinutes, hmIndex) => {
+                if (hmIndex != curIndex) remainTime -= ~~hiddenMinutes.value;
+              });
+              if (remainTime < 0) remainTime = 0;
+              var workingHour = Math.floor(remainTime / 60);
+              var workingMinute = remainTime % 60;
 
               manHourInput.value = "{0}:{1}".format(workingHour, ("0" + workingMinute).slice(-2));
-              manHourHidden.value = workingTime;
-              document.querySelectorAll('#edit-menu-contents > table > tbody > tr.daily > td:nth-child(5)').forEach((_e, _i) => {
-                if (_i === ~~editMenuRow.extIndex) return;
-                var deleteButton = _e.querySelector('div.btn.btn-danger');
-                if (deleteButton)
-                  fireEvent(deleteButton, 'click');
-              });
+              manHourHidden.value = remainTime;
               forceExecuteScript('validateTime();', 'ext-validateTime');
             });
             editMenu4thColumn.appendChild(fullAllocButton);
